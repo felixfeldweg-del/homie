@@ -5,7 +5,7 @@ import 'package:homie/pages/login.dart';
 import 'package:provider/provider.dart';
 
 class AuthGate extends StatelessWidget {
-  const new({super.key});
+  const AuthGate({super.key});
 
   @override
   Widget build(BuildContext context) {
