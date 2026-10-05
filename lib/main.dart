@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:homie/auth/auth_gate.dart';
 import 'package:homie/auth/auth_service.dart';
+import 'package:homie/services/data_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -10,8 +11,11 @@ void main() async {
     url: "https://kjmhicuttnhjjytgnkrw.supabase.co",
   );
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => AuthService(), 
+    MultiProvider(
+      providers:[
+        ChangeNotifierProvider(create: (context) => AuthService()),
+        ChangeNotifierProvider(create: (context) => DataProvider()..init()),
+      ] , 
       child: MainApp(),
     )
   );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:homie/auth/auth_service.dart';
 import 'package:homie/pages/home_page.dart';
-import 'package:homie/pages/login.dart';
+import 'package:homie/auth/login.dart';
 import 'package:provider/provider.dart';
 
 class AuthGate extends StatelessWidget {
