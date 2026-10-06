@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:homie/auth/auth_service.dart';
+import 'package:homie/widgets/panel.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
@@ -22,12 +23,9 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 50),
-          child: Container(
-            constraints: BoxConstraints(minWidth: 200, maxWidth: 400),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.black, width: 2),
-            ),
+          child: Panel(
+            minWidth: 200,
+            maxWidth: 400,
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
@@ -46,6 +44,7 @@ class LoginPage extends StatelessWidget {
                         color: Colors.red
                       )
                     ),
+                  
                   TextField(controller: emailController),
                   TextField(controller: passwordController, obscureText: true),
                   MaterialButton(
